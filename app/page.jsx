@@ -105,6 +105,9 @@ const links = {
   linktree: "https://linktr.ee/_cafemeraki_",
 };
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "/cafe-meraki";
+const logoSrc = `${basePath}/meraki-logo-transparent.png`;
+
 export default function Home() {
   return (
     <main>
@@ -112,7 +115,7 @@ export default function Home() {
         <div className="heroShade" />
         <nav className="topbar" aria-label="Primary navigation">
           <a className="brand" href="#top" aria-label="Cafe Meraki home">
-            <img src="/meraki-logo-transparent.png" alt="Cafe Meraki" />
+            <img src={logoSrc} alt="Cafe Meraki" />
           </a>
           <div className="navlinks">
             <a href="#menu">Menu</a>
@@ -259,7 +262,7 @@ export default function Home() {
         <div className="footerContent">
           <div className="footerIntro">
             <a className="footerBrand" href="#top" aria-label="Cafe Meraki home">
-              <img src="/meraki-logo-transparent.png" alt="Cafe Meraki" />
+              <img src={logoSrc} alt="Cafe Meraki" />
             </a>
             <div>
               <p className="eyebrow">Cafe Meraki by Ovinmee</p>
